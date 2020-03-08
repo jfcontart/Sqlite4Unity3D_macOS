@@ -1,6 +1,6 @@
 # Sqlite4Unity3D_macOS
 
-Sqlite4Unity3D build bundle for macOS (OSX). Use with https://github.com/netpyoung/SqlCipher4Unity3D .
+Sqlite4Unity3D build bundle for macOS© (OSX). Use with https://github.com/netpyoung/SqlCipher4Unity3D .
 
 # macOS©
 
@@ -18,8 +18,9 @@ cd <this directory>
 ```
 
 ## Compile SQLite3 from sources
-
+Open terminal and create directory to work.
 ```
+VERSION=3310100
 mkdir ./tmp
 mkdir ./tmp/${VERSION}
 cd ./tmp/${VERSION}/
@@ -68,7 +69,7 @@ rm -r ./tmp
 
 ## Copy libsqlite3.0.dylib in project
 
-Copy in "MacOS" folder, select file and check in "Inspector" :
+Copy in "MacOS" folder in Unity3D, select file and check in "Inspector" :
 
 On select **platforms for plugin**
 - Set "Editor" - yes
