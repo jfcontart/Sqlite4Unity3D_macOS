@@ -1,35 +1,39 @@
 # Sqlite4Unity3D_macOS
+
 Sqlite4Unity3D build bundle for macOS (OSX)
 
+# macOS©
 
-# MacOS
+You need :
+- be on macOS
+- install xcode
+- install xcode as command
 
-## Needed obtain file's informations
+## Use the SQLiteBuilt.sh
 
+Use the SQLiteBuilt.sh :
 ```
-cd /usr/bin/
-file sqlite3
+cd <this directory>
+./SQLiteBuilt.sh <version example:3310100>
 ```
-``
-sqlite3: Mach-O universal binary with 2 architectures: [x86_64h:Mach-O 64-bit executable x86_64h] [x86_64]
-``
-``
-sqlite3 (for architecture x86_64h):	Mach-O 64-bit executable x86_64h
-``
-``
-sqlite3 (for architecture x86_64):	Mach-O 64-bit executable x86_64
-``
 
 ## Compile SQLite3 from sources
 
 ```
-mkdir /tmp/SQLiteMacOS
-cd /tmp/SQLiteMacOS/
-curl -O https://www.sqlite.org/2020/sqlite-autoconf-3310100.tar.gz
-tar -xzvf sqlite-autoconf-3310100.tar.gz
-cd /tmp/SQLiteMacOS/sqlite-autoconf-3310100/
+mkdir ./tmp
+mkdir ./tmp/${VERSION}
+cd ./tmp/${VERSION}/
+
+#Download sources files from SQLCipher
+
+curl -OL https://www.sqlite.org/2020/sqlite-autoconf-${VERSION}.tar.gz
+tar -xvf sqlite-autoconf-${VERSION}.tar.gz
+ls 
+cd sqlite-autoconf-${VERSION}
 ```
+
 ## Prepare compile option
+
 To access to help :
 ```
 ./configure --help
@@ -37,33 +41,30 @@ To access to help :
 see https://www.sqlite.org/compile.html for the flags.
 
 ```
-cd /tmp/SQLiteMacOS/sqlite-autoconf-3310100/
 make clean
 ./configure \
 --target=x86_64 \
 CFLAGS=" \
 "
-make 
+make  
 ```
 
 ## Copy on desktop
 
 ```
-ls /tmp/SQLiteMacOS/sqlite-autoconf-3310100/.libs/
-open /tmp/SQLiteMacOS/sqlite-autoconf-3310100/.libs/
-file /tmp/SQLiteMacOS/sqlite-autoconf-3310100/.libs/libsqlite3.0.dylib
-mkdir ~/Desktop/SQLiteMacOS
-cp /tmp/SQLiteMacOS/sqlite-autoconf-3310100/.libs/libsqlite3.0.dylib ~/Desktop/SQLiteMacOS/
-open ~/Desktop/SQLiteMacOS/
+cd ..
+cd ..
+cd .. 
+mkdir ./${VERSION}
+cp ./tmp/${VERSION}/sqlite-autoconf-${VERSION}/.libs/libsqlite3.0.dylib ./${VERSION}/
+open ./${VERSION}
 ```
 
 ## Remove directory
 
 ```
-rm -r mkdir /tmp/SQLiteMacOS/*
-rm -r /tmp/SQLiteMacOS
+rm -r ./tmp
 ```
-
 
 ## Copy libsqlite3.0.dylib in project
 
