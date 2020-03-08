@@ -1,6 +1,6 @@
 # Sqlite4Unity3D_macOS
 
-Sqlite4Unity3D build bundle for macOS (OSX)
+Sqlite4Unity3D build bundle for macOS (OSX). Use with https://github.com/netpyoung/SqlCipher4Unity3D .
 
 # macOS©
 
