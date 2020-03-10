@@ -1,13 +1,20 @@
 # Sqlite34Unity3D_macOS
 
+## Binairies in repository
+
+We already built default binaries for some versions and pushed in this repository.
+
+## Shell script
+
 Sqlite34Unity3D build bundle for macOS© (OSX©). 
 
 Use with https://github.com/netpyoung/Sqlite34Unity3D .
 
 You need :
-- be on macOS
-- install xcode
-- install xcode tools and active Command Lines Tools (in xcode preferences>Locations)
+- **Apple©** computer with **macOS 10.15**
+- install **Xcode 11.3**
+- install **Xcode tools** 
+- Active **Command Lines Tools** (in **Xcode Preferences>Locations**)
 
 ## Use the Sqlite3Built_macOS.sh
 
@@ -48,18 +55,13 @@ All is automatic!
 
 ## Copy in Unity3D project
 
-Copy in "MacOS" folder in Unity3D, select file and check in "Inspector" :
+Copy in "**Plugins**" (create one if necessary) folder in Unity3D, select each file and check in "Inspector" :
 
-On select **platforms for plugin**
-- Set "Editor" - yes
-- Set "Standalone" - yes
+### macOS
 
-On tab **unity**
-- Set "CPU" - Any CPU
-- Set "OS" - OSX
+For the file **/Plugins/macOS/sqlite.bundle**
 
-On tab **standalone**
-- Set "X64" - yes
+![OSX](./OSX_Inspector.png)
 
 ## LICENCES
 
