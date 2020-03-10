@@ -40,8 +40,11 @@ cd ..
 cd .. 
 
 mkdir ./${VERSION}
+mkdir ./${VERSION}/macOS
+rm  ./${VERSION}/macOS/libsqlite3.0.dylib
 
-cp ./tmp/${VERSION}/sqlite-autoconf-${VERSION}/.libs/libsqlite3.0.dylib ./${VERSION}/
+cp ./tmp/${VERSION}/sqlite-autoconf-${VERSION}/.libs/libsqlite3.0.dylib ./${VERSION}/macOS/libsqlite3.0.dylib
+
 open ./${VERSION}
 
 #Clean 
