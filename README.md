@@ -49,7 +49,7 @@ save and execute:
 
 ```
 cd <this directory>
-./Sqlite3_macOS.sh <version example:4.3.0>
+./Sqlite3_macOS.sh <year> <version example:4.3.0>
 ```
 All is automatic!
 
